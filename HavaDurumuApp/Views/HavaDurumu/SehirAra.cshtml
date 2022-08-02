@@ -1,0 +1,21 @@
+﻿@model HavaDurumuApp.Models.SehirAra
+
+@{
+    ViewData["Baslik"] = "SehirAra";
+}
+
+<div class="container">
+    <form method="post">
+        <div class="container">
+            <h2>Şehir ara</h2>
+            <div>
+                <input asp-for="SehirAdi" class="form-control" placeholder= "Şehir giriniz" />
+                <button asp-controller="HavaDurumu" asp-action="SehirAra" class="btn btn-outline-primary">
+                    Ara
+                </button>
+                <span asp-validation-for="SehirAdi" class="text-danger"></span>
+            </div>
+        </div>
+    </form>
+
+</div>
